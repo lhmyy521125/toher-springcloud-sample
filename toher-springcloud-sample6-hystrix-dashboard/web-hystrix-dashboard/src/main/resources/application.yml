@@ -1,0 +1,7 @@
+server:
+  #服务端口
+  port: 9101
+spring:
+  application:
+    #服务名称
+    name: web-hystrix-dashboard

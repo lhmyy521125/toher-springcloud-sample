@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: service-zuul
+
+server:
+  port: 8899
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    feign: #自定义名称
+      path: /feign/** # 自定义的路由
+      serviceId: service-feign # 指向的服务名称

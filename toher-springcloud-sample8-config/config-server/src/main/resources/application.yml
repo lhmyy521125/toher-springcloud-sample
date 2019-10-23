@@ -1,0 +1,20 @@
+server:
+  port: 9102 # 默认8888 如果配置文件为bootstrap.yml 可以修改其它
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/lhmyy521125/config-server
+          search-paths: config
+          username:
+          password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
